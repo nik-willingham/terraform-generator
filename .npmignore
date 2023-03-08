@@ -1,0 +1,7 @@
+node_modules
+test/__coverage__
+test/__output__
+docs
+tryout.ts
+tryout.tf
+tryout.tfvars
