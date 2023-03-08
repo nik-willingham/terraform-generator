@@ -31,7 +31,7 @@
     "lint": "eslint src/*.ts src/**/*.ts test/**/*.ts",
     "test": "jest",
     "tryout": "ts-node tryout.ts",
-    "build": "del-cli --force dist && tsc",
+    "build": "del-cli --force dist && tsc && babel dist -d dist",
     "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "postpublish": "del-cli --force dist",
@@ -42,9 +42,14 @@
     "github-sponsors": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.0.0",
     "@types/jest": "^29.2.5",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^29.5.0",
     "del-cli": "^4.0.1",
     "eslint": "^8.32.0",
     "eslint-plugin-import": "^2.27.4",
