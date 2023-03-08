@@ -1,7 +1,7 @@
-import child_process from 'child_process';
+/*import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import shell from 'shelljs';
+import shell from 'shelljs';*/
 import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from './blocks';
 import { Util } from './Util';
 
@@ -106,7 +106,7 @@ export class TerraformGenerator {
    *
    * @param options options
    */
-  write(options?: WriteOptions): void {
+  /*write(options?: WriteOptions): void {
     if (!options) {
       options = {};
     }
@@ -140,6 +140,7 @@ export class TerraformGenerator {
       child_process.execSync(`${options.format} fmt`, { cwd: options.dir });
     }
   }
+  */
 
   /**
    * Add blocks into Terraform.
