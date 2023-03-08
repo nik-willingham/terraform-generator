@@ -32,6 +32,7 @@
     "test": "jest",
     "tryout": "ts-node tryout.ts",
     "build": "del-cli --force dist && tsc",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "postpublish": "del-cli --force dist",
     "postversion": "git push",
